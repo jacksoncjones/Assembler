@@ -19,5 +19,5 @@ int main()
         runningSum = runningSum + n;
     }
 
-    cout << runningSum;
+    cout << "The sum of the numbers between " << first << " and " << last << " = " << runningSum;
 }

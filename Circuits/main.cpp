@@ -13,30 +13,30 @@ int main()
     cin >> UserChoice;
 
     if(UserChoice == 1) {
-        cout << "You have selected to solve for Voltage.";
+        cout << "You have selected to solve for Voltage." << endl;
         cout << "Please enter the Resistance:";
-        cin Resistance;
+        cin >> Resistance;
         cout << "Please enter the Amperage:";
-        cin Amperage;
+        cin >> Amperage;
         Voltage = Resistance * Amperage;
-        cout << "The Voltage of the circuit =" Voltage;
+        cout << "The Voltage of the circuit =" << Voltage;
 
     } else if(UserChoice == 2) {
-        cout << "You have selected to solve for Resistance.";
+        cout << "You have selected to solve for Resistance." << endl;
         cout << "Please enter the Voltage:";
-        cin Voltage;
+        cin >> Voltage;
         cout << "Please enter the Amperage:";
-        cin Amperage;
+        cin >> Amperage;
         Resistance = Voltage / Amperage;
-        cout << "The Resistance of the circuit =" Resistance;
+        cout << "The Resistance of the circuit =" << Resistance;
 
     } else if(UserChoice ==3) {
-        cout << "You have selected to solve for Amperage.";
+        cout << "You have selected to solve for Amperage." << endl;
         cout << "Please enter the Voltage:";
-        cin Voltage;
+        cin >> Voltage;
         cout << "Please enter the Resistance:";
-        cin Resistance;
+        cin >> Resistance;
         Amperage = Voltage / Resistance;
-        cout << "The Amperage of the circuit =" Amperage;
+        cout << "The Amperage of the circuit =" << Amperage;
     }
 }
