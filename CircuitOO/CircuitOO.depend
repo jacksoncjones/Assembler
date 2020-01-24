@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1579897030 source:/home/user/git/Assembler/CircuitOO/src/Circuit.cpp
+	"Circuit.h"
+
+1579898825 /home/user/git/Assembler/CircuitOO/include/Circuit.h
+
