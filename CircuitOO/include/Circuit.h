@@ -15,6 +15,10 @@ class Circuit
         double GetResistance() { return Resistance; }
         void SetResistance(double val) { Resistance = val; }
 
+        double SolveVoltage();
+        double SolveResistance();
+        double SolveAmperage();
+
     protected:
 
     private:
