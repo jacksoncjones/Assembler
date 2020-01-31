@@ -1,26 +1,26 @@
 #include <iostream>
+#include "Circuit.h"
 
 using namespace std;
 
 int main()
 {
-    Circuit myCircuit;
-    double NumberOfResistors;
-    double UserChoice;
-    double[] Resistances;
+    int NumberOfResistors;
 
-    cout << "This program calculates the resistance of a circuit based on the circuit type and number of resistors." << endl;
+    cout << "This program calculates the resistance of a circuit based on the circuit type and its resistors." << endl;
     cout << "Please enter the number of resistors:" << endl;
     cin >> NumberOfResistors;
-    myCircuit.SetNumberOfResistors(NumberOfResistors);
+    Circuit myCircuit(NumberOfResistors);
 
-    cout << "Enter the circuit type: 1) Parallel 2)Series" << endl;
-    cin >> UserChoice;
+    cout << "Enter the circuit type: 1) Series 2)Parallel" << endl;
+    cin >> myCircuit.CircuitType;
 
-    if (UserChoice == 1) {
-
-        cout << "You have selected Parallel." << endl;
-        cout << "Please enter the resistances of the resistors:" << endl;
-        cin >> Resistances[];
+    for (int n=0; n<NumberOfResistors; ++n) {
+        cout << "Please enter the resistances for resistor " << (n+1) << endl;
+        cin >> myCircuit.Resistances[n];
     }
+
+    cout << "The total resistance is " << myCircuit.TotalResistance() << endl;
+    return 0;
 }
+

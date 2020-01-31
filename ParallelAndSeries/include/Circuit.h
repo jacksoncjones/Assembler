@@ -5,20 +5,18 @@
 class Circuit
 {
     public:
-        Circuit();
+        Circuit(int);
         virtual ~Circuit();
-
-        double GetNumberOfResistors() { return NumberOfResistors; }
-        void SetNumberOfResistors(double val) { NumberOfResistors = val; }
-
         unsigned int CircuitType;
         double* Resistances;
         double TotalResistance();
 
+        const unsigned int SERIES = 1;
+        const unsigned int PARALLEL = 2;
+
     protected:
 
     private:
-        double NumberOfResistors;
 
         double SeriesResistance();
         double ParallelResistance();
