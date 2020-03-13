@@ -7,6 +7,8 @@ void MultiplyArrays(const double arraySize, const double arrayOne[], const doubl
     for(int n=0; n<arraySize; n++)
     {
         *answerArray[n] = arrayOne[n] * arrayTwo[n];
+
+        printf("%lf", *answerArray[n]);
     }
 }
 
@@ -14,28 +16,28 @@ void MultiplyArrays(const double arraySize, const double arrayOne[], const doubl
 int main()
 {
 
-    double arraySize;
+    int arraySize;
     double* arrayOne;
     double* arrayTwo;
     double* answerArray;
 
 
-    printf("Enter how many numbers are in the array:  \n");
-    scanf("%lf", &arraySize);
+    printf("Enter how many positions are in the arrays:  \n");
+    scanf("%i", &arraySize);
 
     arrayOne = malloc(arraySize * sizeof(double));
     arrayTwo = malloc(arraySize * sizeof(double));
 
     for(int n=0; n < arraySize; n++)
     {
-        printf("Please enter value #%lf  \n", arraySize);
+        printf("Please enter value #%i  \n", n+1);
         scanf("%lf", &arrayOne[n]);
     }
 
-    printf("Please enter value #%lf of Array #2  \n", arraySize);
+    printf("Please enter values of Array #2  \n");
     for(int n=0; n < arraySize; n++)
     {
-        printf("Please enter value #%lf  \n", arraySize);
+        printf("Please enter value #%i  \n", n+1);
         scanf("%lf", &arrayTwo[n]);
     }
 
@@ -43,13 +45,11 @@ int main()
     MultiplyArrays(arraySize, arrayOne, arrayTwo, &answerArray);
 
 
-    for(int n=0; n<=arraySize;n++){
-
-    printf("Value at position %i = %lf",n,answerArray[n]);
+    for(int n=0; n<arraySize; n++)
+    {
+        printf("\n  Value at position %i = %lf   \n",(n+1),*answerArray[n]);
 
     }
-
-
 }
 
 
