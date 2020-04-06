@@ -1511,7 +1511,7 @@
     19 0000001B 480FAFD9                            imul rbx, rcx           ;multiply resistance and amperage
     20 0000001F 48891D(00000000)                    mov [voltage], rbx      ;define resistance to rax
     21                                              
-    22 00000026 EB2C                                jmp end
+    22 00000026 EB28                                jmp end
     23                                              
     24                                              
     25                                                                      ;if resistance is zero, calculate it
@@ -1522,18 +1522,18 @@
     30 00000033 48F7F9                              idiv rcx                ;divide rax by rcx, stores in rax, remainder in rdx
     31 00000036 488905(10000000)                    mov [resistance], rax   ;define resistance to rax
     32                                              
-    33 0000003D EB15                                jmp end                                                                                                                       
+    33 0000003D EB11                                jmp end                                                                                                                       
     34                                                
     35                                                                                                                                                                                                                                            
     36                                                                      ;if amperage is zero, calculate it
     37                                              amperage_section:
-    38 0000003F 4883F900                            cmp rcx, 0              ;see if we are calculating amperage
-    39 00000043 BA00000000                          mov rdx, 0              ;clear rdx
-    40 00000048 48F7FB                              idiv rbx                ;divides rax by rbx, stores in rax, remainders in rdx
-    41 0000004B 488905(08000000)                    mov [amperage], rax     ;define amperage to rax
-    42                                              
-    43 00000052 EB00                                jmp end
-    44                                              
-    45                                                                       
-    46                                              
-    47                                              end:
+    38 0000003F BA00000000                          mov rdx, 0              ;clear rdx
+    39 00000044 48F7FB                              idiv rbx                ;divides rax by rbx, stores in rax, remainders in rdx
+    40 00000047 488905(08000000)                    mov [amperage], rax     ;define amperage to rax
+    41                                              
+    42 0000004E EB00                                jmp end
+    43                                              
+    44                                                                       
+    45                                              
+    46                                              end:
+    47 00000050 B800000000                          mov rax, 0
